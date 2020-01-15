@@ -8,7 +8,7 @@ public class UsuarioDAOHibernate implements UsuarioDAO {
 	
 	private Session session;
 	
-	private void setSession(Session session) {
+	public void setSession(Session session) {
 		this.session = session;
 	}
 
@@ -33,7 +33,7 @@ public class UsuarioDAOHibernate implements UsuarioDAO {
 	}
 	
 	public Usuario buscarPorLogin(String login) {
-		// uma selecao no objeto Usuario
+		// uma selecao no objeto Usuario - hql (Hibernate query language)
 		String hql = "select u from Usuario u where u.login = :login";
 		// utilizando o session interno para gerar a consulta
 		Query query = this.session.createQuery(hql);
