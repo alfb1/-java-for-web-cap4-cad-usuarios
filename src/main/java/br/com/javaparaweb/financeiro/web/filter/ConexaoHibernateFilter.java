@@ -16,7 +16,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import br.com.javaparaweb.financeiro.util.HibernateUtil;
-
+//Register a filter for jsf pages
 @WebFilter(urlPatterns = { "*.jsf" })
 public class ConexaoHibernateFilter implements Filter {
 

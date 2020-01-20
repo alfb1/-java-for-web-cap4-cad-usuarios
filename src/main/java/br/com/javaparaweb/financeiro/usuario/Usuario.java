@@ -24,7 +24,7 @@ public class Usuario implements Serializable {
 	private String login;
 	private String senha;
 	private Date nascimento;
-	private String culular;
+	private String celular;
 	private String idioma;
 	private boolean ativo;
 	public Integer getCodigo() {
@@ -63,11 +63,11 @@ public class Usuario implements Serializable {
 	public void setNascimento(Date nascimento) {
 		this.nascimento = nascimento;
 	}
-	public String getCulular() {
-		return culular;
+	public String getCelular() {
+		return celular;
 	}
-	public void setCulular(String culular) {
-		this.culular = culular;
+	public void setCelular(String culular) {
+		this.celular = culular;
 	}
 	public String getIdioma() {
 		return idioma;
@@ -87,7 +87,7 @@ public class Usuario implements Serializable {
 		int result = 1;
 		result = prime * result + (ativo ? 1231 : 1237);
 		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
-		result = prime * result + ((culular == null) ? 0 : culular.hashCode());
+		result = prime * result + ((celular == null) ? 0 : celular.hashCode());
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + ((idioma == null) ? 0 : idioma.hashCode());
 		result = prime * result + ((login == null) ? 0 : login.hashCode());
@@ -112,10 +112,10 @@ public class Usuario implements Serializable {
 				return false;
 		} else if (!codigo.equals(other.codigo))
 			return false;
-		if (culular == null) {
-			if (other.culular != null)
+		if (celular == null) {
+			if (other.celular != null)
 				return false;
-		} else if (!culular.equals(other.culular))
+		} else if (!celular.equals(other.celular))
 			return false;
 		if (email == null) {
 			if (other.email != null)
