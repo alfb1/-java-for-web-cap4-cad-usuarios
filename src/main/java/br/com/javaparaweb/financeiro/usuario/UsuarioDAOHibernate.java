@@ -28,6 +28,7 @@ public class UsuarioDAOHibernate implements UsuarioDAO {
        return (Usuario) this.session.get(Usuario.class, codigo);
 	}
 	
+	@SuppressWarnings("unchecked")
 	public List<Usuario> listar() {
 		return this.session.createCriteria(Usuario.class).list();
 	}
