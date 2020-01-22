@@ -28,26 +28,24 @@ public class UsuarioBean {
 	public void setConfirmarSenha(String confirmarSenha) {
 		this.confirmarSenha = confirmarSenha;
 	}
-	
-	public String salvar() 
-	{
+
+	public String salvar() {
 		FacesContext context = FacesContext.getCurrentInstance();
-		
+
 		String senha = this.usuario.getSenha();
-		
+
 		if (!senha.equals(this.confirmarSenha)) {
 			FacesMessage facesMessage = new FacesMessage("A senha não foi confirmada corretamente");
 			context.addMessage(null, facesMessage);
 			return null;
 		}
-		
+
 		UsuarioRN usuarioRN = new UsuarioRN();
 		usuarioRN.salvar(usuario);
 		return "usuario_sucesso";
 	}
-	
-	public String novo() 
-	{
+
+	public String novo() {
 		this.usuario = new Usuario();
 		this.usuario.setAtivo(true);
 		return "/publico/usuario";

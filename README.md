@@ -18,3 +18,6 @@ Erro :
 java.lang.ClassNotFoundException: javax.faces.webapp.FacesServlet
 Solução :
 Verifique se os jars do que estão no seu pom também se encontram na pasta lib do projeto. Senão estiverem faça o seguinte: Properties" --> "Deployment Assembly", adicione "Java Build Path Entries -> Maven Dependencies"
+=======
+Java compiler level does not match the version of the installed Java project facet.
+
